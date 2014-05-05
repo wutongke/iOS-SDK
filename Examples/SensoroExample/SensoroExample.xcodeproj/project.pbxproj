@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		284A7997190E098100C5141C /* SensoroSense.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SensoroSense.framework; path = ../../SensoroSDK/SensoroSense.framework; sourceTree = "<group>"; };
+		285C963C19173AE6001249F0 /* SensoroAppKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensoroAppKey.h; sourceTree = "<group>"; };
 		63148A6D1904F3F00028E578 /* SensoroExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensoroExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63148A701904F3F00028E578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63148A721904F3F00028E578 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +236,7 @@
 		63148AA71904F8990028E578 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				285C963C19173AE6001249F0 /* SensoroAppKey.h */,
 				63148AB3190512BD0028E578 /* KeyDefine.h */,
 				63148AA81904F8C50028E578 /* SNSensoroSenseWatcher.h */,
 				63148AA91904F8C50028E578 /* SNSensoroSenseWatcher.m */,

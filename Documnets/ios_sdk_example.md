@@ -14,21 +14,21 @@
 
 ####  SNSensoroSenseWatcher.h      
 
-##### 生命周期接口
+##### 生命周期接口    
 
-- 开始
+- 开始    
 
-```
-	[[SNSensoroSenseWatcher sharedInstance] startService];
-	[[SNSensoroSenseWatcher sharedInstance] addObserver:self];
-```
+```    
+	[[SNSensoroSenseWatcher sharedInstance] startService];    
+	[[SNSensoroSenseWatcher sharedInstance] addObserver:self];    
+```    
 
 - 结束
 
-```
-	[[SNSensoroSenseWatcher sharedInstance] stopService];
-	[[SNSensoroSenseWatcher sharedInstance] removeObserver:self];
-```
+```     
+	[[SNSensoroSenseWatcher sharedInstance] stopService];     
+	[[SNSensoroSenseWatcher sharedInstance] removeObserver:self];    
+```    
 
 添加的观测者需要通过实现SensoroSenseDelegate的接口方法,以检测相应的事件
 
@@ -291,10 +291,10 @@ if ([action.event.name isEqualToString:@"stay"] &&
 * event配置
 	* type:"spot"
 	* name:"enter"
-	* spot:对应事件的spot
+	* spot 下的参数配置
 		* spot param:```{"type":"verify","vid":"1"}```
 		* spot type:"verify"
-	* zone:对应事件的zone 
+	* zone : 对应事件的zone 
 * 将enter的remote属性设置为true
 
 ###### 客户端实现
@@ -368,7 +368,7 @@ if ([action.event.type isEqualToString:ACTION_SRC_TYPE_SPOT] &&
 * event配置
 	* type:"spot"
 	* name:"enter"
-	* spot:对应事件的spot
+	* spot 下的参数配置
 		* spot param:```{"type":"fixedcorner","pid":"1"}```
 		* spot type:"fixedcorner"
 	* zone:对应事件的zone 

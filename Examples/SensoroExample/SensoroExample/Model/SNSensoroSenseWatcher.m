@@ -8,6 +8,7 @@
 
 #import "SNSensoroSenseWatcher.h"
 #import "KeyDefine.h"
+#import "SensoroAppKey.h"
 #import <SensoroSense/SNSpot.h>
 #import <SensoroSense/SNZone.h>
 #import <SensoroSense/SNAction.h>
@@ -34,7 +35,7 @@
 }
 
 - (void) startService{
-    [[SensoroSense sharedInstance] startService:@"1" appKey:@"SensoroExample" options:nil];
+    [[SensoroSense sharedInstance] startService:APPID appKey:@"SensoroExample" options:nil];
     [[SensoroSense sharedInstance] addObserver:self];
 }
 
@@ -72,12 +73,12 @@
 #pragma mark SNActionDelegate
 
 - (void) onAction:(SNAction *)action{
-    //    NSString* catchKey = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0-0004-0007";
-    //    if ([action.event.spot.indentifyKey isEqualToString:catchKey] &&
-    //        [action.event.name isEqualToString:@"enter"]) {
-    //        NSLog(@"on action:%@",action);
-    //    }
-    //
+    NSString* catchKey = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0-0005-0003";
+    if ([action.event.spot.indentifyKey isEqualToString:catchKey] &&
+        [action.event.name isEqualToString:@"enter"]) {
+        NSLog(@"on action:%@",action);
+    }
+
     //进场消息
     if ([action.event.name isEqualToString:ENTER_KEY] &&
         [action.event.type isEqualToString:ACTION_SRC_TYPE_ZONE]){
