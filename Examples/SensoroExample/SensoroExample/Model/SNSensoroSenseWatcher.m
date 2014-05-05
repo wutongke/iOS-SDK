@@ -35,6 +35,10 @@
 }
 
 - (void) startService{
+//    NSDictionary* option = @{
+//                             @"background":[NSNumber numberWithBool:YES]
+//    };
+    
     [[SensoroSense sharedInstance] startService:APPID appKey:@"SensoroExample" options:nil];
     [[SensoroSense sharedInstance] addObserver:self];
 }
@@ -73,9 +77,8 @@
 #pragma mark SNActionDelegate
 
 - (void) onAction:(SNAction *)action{
-    NSString* catchKey = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0-0005-0003";
-    if ([action.event.spot.indentifyKey isEqualToString:catchKey] &&
-        [action.event.name isEqualToString:@"enter"]) {
+    NSString* catchKey = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0-0008-0002";
+    if ([action.event.spot.indentifyKey isEqualToString:catchKey]) {
         NSLog(@"on action:%@",action);
     }
 
@@ -208,7 +211,6 @@
                     }
                 }
             }
-            
         }
     }
     

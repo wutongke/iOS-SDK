@@ -9,6 +9,6 @@
 #ifndef SensoroExample_SensoroAppKey_h
 #define SensoroExample_SensoroAppKey_h
 
-#define APPID  @"1"
+#define APPID  @"3"
 
 #endif

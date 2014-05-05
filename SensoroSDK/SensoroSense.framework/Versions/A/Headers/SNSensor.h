@@ -14,13 +14,6 @@
 
 @class SNBeacon;
 
-enum SENSORO_TIME_REDUNDANCY {
-    SENSORO_TIME_REDUNDANCY_LOW = 0,
-    SENSORO_TIME_REDUNDANCY_NORMAL = 1,
-    SENSORO_TIME_REDUNDANCY_HIGHT = 2
-};
-
-
 @interface SNSensor : NSObject
 
 @property (readonly) NSString* key;
@@ -48,7 +41,7 @@ enum SENSORO_TIME_REDUNDANCY {
 - (void) pushBleDistance:(CLLocationAccuracy) dist;
 - (void) clearBleDistance;
 
-+ (SNSensor*) getInstanceFrom:(CLBeacon *) beacon;
-+ (SNSensor*) getInstanceFromBleBeacon:(SNBeacon *) beacon;
++ (instancetype) getInstanceFrom:(CLBeacon *) beacon;
++ (instancetype) getInstanceFromBleBeacon:(SNBeacon *) beacon;
 
 @end
