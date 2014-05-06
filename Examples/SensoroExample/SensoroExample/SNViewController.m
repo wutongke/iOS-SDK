@@ -11,8 +11,8 @@
 
 @interface SNViewController () <SensoroSenseDelegate>
 
-@property (strong, nonatomic) IBOutlet UISwitch *serviceSwitch;
 @property (strong, nonatomic) IBOutlet UILabel *serviceState;
+
 - (IBAction)serviceAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *enterState;
@@ -43,6 +43,22 @@
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+}
+
+/**
+ *  服务开关方法，通过控制UISwitch空间实现服务的开关
+ *
+ */
+- (IBAction)serviceAction:(id)sender {
+    UISwitch * serviceSwitch = (UISwitch *)sender;
+    if (serviceSwitch.isOn) {
+        self.serviceState.text = @"服务已开启";
+        [[SNSensoroSenseWatcher sharedInstance] startService];
+    }else{
+        self.serviceState.text = @"服务已停止";
+        [[SNSensoroSenseWatcher sharedInstance] stopService];
+    }
+    
 }
 
 #pragma mark SensoroSenseDelegate
@@ -104,14 +120,4 @@
     }
 }
 
-- (IBAction)serviceAction:(id)sender {
-    if (_serviceSwitch.isOn) {
-        self.serviceState.text = @"服务已开启";
-        [[SNSensoroSenseWatcher sharedInstance] startService];
-    }else{
-        self.serviceState.text = @"服务已停止";
-        [[SNSensoroSenseWatcher sharedInstance] stopService];
-    }
-    
-}
 @end

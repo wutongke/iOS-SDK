@@ -116,7 +116,6 @@
                         <outlet property="fixedcornerState" destination="t8B-U9-hqU" id="X1W-un-2K5"/>
                         <outlet property="goodsState" destination="vkT-CP-0vq" id="BXJ-zc-RcF"/>
                         <outlet property="serviceState" destination="Y6B-7e-cN7" id="09T-Zd-hdw"/>
-                        <outlet property="serviceSwitch" destination="oS0-eC-Yob" id="8jX-wX-hia"/>
                         <outlet property="verifyState" destination="SX1-EW-N0T" id="sfn-Tj-wpA"/>
                     </connections>
                 </viewController>
