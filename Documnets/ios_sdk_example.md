@@ -101,7 +101,9 @@ retInfo是一个NSDictionary对象，可以存储通过Action回调的各项参�
 * __进店消息配置__  
 
 * param:显示消息的dictionary，示例：   
-	* `{"message":{"content":"This is an enter message."}}`
+
+	* `{"message":{"content":"This is an enter message."}}`  
+	
 * event配置
 	* type:"zone"
 	* name:"enter"
@@ -112,8 +114,10 @@ retInfo是一个NSDictionary对象，可以存储通过Action回调的各项参�
 	
 * __离店消息配置__    
 
-* param:显示消息的dictionary，示例：   
+* param:显示消息的dictionary，示例：  
+
 	* `{"message":{"content":"This is a leave message."}}`
+
 * event配置
 	* type:"zone"
 	* name:"leave"
@@ -184,13 +188,8 @@ if ([action.event.name isEqualToString:@"leave"] &&
   
 * param:显示消息的dictionary，示例：   
 	
-	```
-{
-    "credit": {
-        "content": "This is a credit message."
-    }
-}  
-```
+	```{"credit": {"content": "This is a credit message."}}```
+
 * event配置
 	* type:"zone"
 	* name:"enter"
@@ -233,6 +232,7 @@ if (action.params != nil) {
 ###### Action Param配置   
   
 * param:显示消息的dictionary，示例：   
+
 	```{"credit": {"content": "This is a credit message."}}```   
 
 * event配置
