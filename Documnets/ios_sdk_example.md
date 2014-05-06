@@ -233,14 +233,8 @@ if (action.params != nil) {
 ###### Action Param配置   
   
 * param:显示消息的dictionary，示例：   
-	
-```
-{
-    "credit": {
-        "content": "This is a credit message."
-    }
-}
-```
+	```{"credit": {"content": "This is a credit message."}}```   
+
 * event配置
 	* type:"spot"
 	* name:"stay"

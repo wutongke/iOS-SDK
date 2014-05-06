@@ -35,10 +35,6 @@
 }
 
 - (void) startService{
-//    NSDictionary* option = @{
-//                             @"background":[NSNumber numberWithBool:YES]
-//    };
-    
     [[SensoroSense sharedInstance] startService:APPID appKey:@"SensoroExample" options:nil];
     [[SensoroSense sharedInstance] addObserver:self];
 }
